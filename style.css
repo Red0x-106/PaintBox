@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1b1b1b;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    height: 70px;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    background: #333333;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #444444;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+.tools {
+    width: 210px;
+    background: #242424;
+    padding: 20px;
+    border-right: 1px solid #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tools h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.tools label {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.tools input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.tools input[type="range"] {
+    width:100%;
+    cursor:pointer;
+
+}
+
+.canvas-area{
+    flex:1;
+    background:#111111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    overflow:auto;
+}
+
+canvas{
+    background:white;
+    max-width:100%;
+    max-height:100%;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.4);
+    cursor:crosshair;
+}
+
+#clearBtn{
+    margin-top:10px;
+    background:#8b3030;
+
+}
+
+#clearBtn:hover{
+    background:#a43b3b;
+
+}
+
+@media (max-width:700px){
+    header{
+        padding:0 12px;
+
+    }
+
+    header h1{
+        font-size:20px;
+
+    }
+
+    .top-buttons{
+        gap:5px;
+
+    }
+
+    .top-buttons button{
+        padding:7px 9px;
+    }
+
+    .tools{
+        width:160px;
+        padding:12px;
+
+
+    }
+
+    .canvas-area{
+        padding:10px;
+    }
+}
