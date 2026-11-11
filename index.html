@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PaintBox</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>PaintBox</h1>
+
+            <div class="top-buttons">
+                <button id="newBtn">New</button>
+                <button id="openBtn">Open</button>
+                <button id="saveBtn">Save</button>
+                <button id="undoBtn">Undo</button>
+                <button id="redoBtn">Redo</button>
+            </div>
+        </header>
+
+        <main>
+
+            <aside class="tools">
+
+                <h2>Tools</h2>
+
+                <button id="brushBtn">Brush</button>
+                <button id="eraserBtn">Eraser</button>
+                <button id="lineBtn">Line</button>
+                <button id="rectangleBtn">Rectangle</button>
+                <button id="circleBtn">Circle</button>
+
+                <label for="colorPicker">Color</label>
+                <input type="color" id="colorPicker" value="#000000">
+
+                <label for="brushSize">Brush Size</label>
+                <input type="range" id="brushSize" min="1" max="50" value="5">
+
+                <label for="backgroundColor">Background</label>
+
+                <input type="color" id="backgroundColor" value="#ffffff">
+
+                <button id="clearBtn">Clear Canvas</button>
+            </aside>
+
+            <section class="canvas-area">
+                <canvas id="canvas" width="1000" height="600"></canvas>
+            </section>
+        </main>
+
+        <input type="file" id="fileInput" accept="image/*" hidden>
+
+        <script src="script.js"></script>
+    </body>
+</html>
