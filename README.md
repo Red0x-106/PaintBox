@@ -4,6 +4,8 @@ PaintBox is a simple drawing website I made using HTML, CSS and JavaScript.
 
 I wanted to make something where I could open the website and just start drawing without needing a complicated setup. It has the basic tools needed for drawing, along with some extra controls like undo, redo and saving the drawing.
 
+site is live at https://red0x-106.github.io/PaintBox/
+
 ## Features
 
 - Draw using a brush
