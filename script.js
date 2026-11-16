@@ -10,6 +10,7 @@ const eraserBtn = document.getElementById("eraserBtn");
 const lineBtn = document.getElementById("lineBtn");
 const rectangleBtn = document.getElementById("rectangleBtn");
 const circleBtn = document.getElementById("circleBtn");
+const triangleBtn = document.getElementById("triangleBtn");
 
 const newBtn = document.getElementById("newBtn");
 const saveBtn = document.getElementById("saveBtn");
@@ -76,6 +77,17 @@ function drawShape(event) {
         ctx.arc(startX, startY, radius, 0, Math.PI * 2);
         ctx.stroke();
     }
+
+    if (tool === "triangle") {
+        const width = position.x - startX;
+        const height = position.y - startY;
+
+        ctx.moveTo(startX + width / 2, startY);
+        ctx.lineTo(startX, startY + height);
+        ctx.lineTo(startX + width, startY + height);
+        ctx.closePath();
+        ctx.stroke();
+    }
 }
 
 canvas.addEventListener("mousedown", function(event) {
@@ -115,7 +127,8 @@ canvas.addEventListener("mouseup", function(event) {
     if (
         tool === "line" ||
         tool === "rectangle" ||
-        tool === "circle"
+        tool === "circle" ||
+        tool === "triangle"
     ) {
         drawShape(event);
     }
@@ -159,6 +172,12 @@ rectangleBtn.addEventListener("click", function() {
 circleBtn.addEventListener("click", function() {
 
     tool = "circle";
+    ctx.strokeStyle = colorPicker.value;
+});
+
+triangleBtn.addEventListener("click", function() {
+
+    tool = "triangle";
     ctx.strokeStyle = colorPicker.value;
 });
 
